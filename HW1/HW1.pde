@@ -20,7 +20,7 @@ void setup()
   {
    //a little repetitive but we need to create a new Node  
    //for each in the array
-   nodes[i] = new Node(random(width), random(height), random(1,5), random(1,7));
+   nodes[i] = new Node(random(100,width - 100), random(100,height - 100), random(-7,7), random(-5,5));
   }
 }
 
@@ -94,7 +94,7 @@ void keyPressed()
 
 boolean isNear(Node node1, Node node2)
 {
-  if (dist(node1.posX, node1.posY, node2.posX, node2.posY) <= 750)
+  if (dist(node1.posX, node1.posY, node2.posX, node2.posY) <= 500)
     return true;
   else
     return false;
